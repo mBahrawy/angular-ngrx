@@ -1,0 +1,15 @@
+.card {
+  display: flex;
+  flex-direction: column;
+    height: 100%;
+
+  .header-image {
+    background-size: cover;
+    background-position: center;;
+  }
+  .mat-card-image {
+    height: 200px;
+    object-fit: cover;
+  }
+
+}

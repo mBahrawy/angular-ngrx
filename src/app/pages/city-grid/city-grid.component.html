@@ -1,0 +1,5 @@
+<main class="container-xl container-fluid mt-5">
+    <div class="grid">
+        <app-city-card *ngFor="let city of allCities$ | async" [cityData]="city" (nukeEvent)="nuke($event)" (growEvent)="grow($event)"></app-city-card>
+    </div>
+</main>

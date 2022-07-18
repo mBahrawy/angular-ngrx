@@ -1,0 +1,22 @@
+<mat-card class="card">
+    <mat-card-header>
+      <div mat-card-avatar class="header-image" [ngStyle]="{'background-image': 'url(' + cityData?.nation_flag + ')' }"></div>
+      <mat-card-title>{{cityData?.city_name}}</mat-card-title>
+      <mat-card-subtitle>{{cityData?.nation}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image [src]="cityData?.city_image" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+      <p> {{cityData?.description}}  </p>
+    </mat-card-content>
+    <mat-card-actions class="d-flex flex-column mb-0">
+      <span class="pb-2 px-2"> Population: {{cityData?.population}}</span>
+
+        <div class="example-button-row px-2">
+            <button mat-flat-button color="warn" class="mb-2 me-2" (click)="nuke(cityData?.id)">Nuke</button>
+            <!-- <button mat-flat-button color="warn" class="mb-2 me-2" *ngIf="cityData?.is_nukable" (click)="nuke(cityData?.id)">Nuke</button> -->
+            <!-- <button mat-raised-button disabled class="mb-2 me-2" *ngIf="!cityData?.is_nukable">Nuke</button> -->
+            <button mat-flat-button color="primary" class="mb-2 me-2" (click)="grow(cityData?.id)">Grow</button>
+        </div>
+        
+    </mat-card-actions>
+  </mat-card>
